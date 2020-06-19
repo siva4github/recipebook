@@ -1,4 +1,4 @@
-import { Ingredient } from './../_model/Ingredient';
+import { Ingredient } from '../_model/Ingredient.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
