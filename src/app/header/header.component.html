@@ -12,14 +12,19 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item dropdown" appDropDown>
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Save Data</a>
-                        <a class="dropdown-item" href="#">Fetch Data</a>
+                <li class="nav-item">
+                    <div class="btn-group" dropdown>
+                        <a id="button-animated" dropdownToggle class="nav-link dropdown-toggle" 
+                        aria-controls="dropdown-animated" style="cursor: pointer">
+                            Dropdown <span class="caret"></span>
+                        </a>
+                        <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu"
+                            aria-labelledby="button-animated">
+                            <li role="menuitem"><a class="dropdown-item" href="#">Save Data</a></li>
+                            <li role="menuitem"><a class="dropdown-item" href="#">Fetch Data</a></li>
+                        </ul>
                     </div>
-                </li>
+                </li>                
             </ul>
         </div>
     </div>
