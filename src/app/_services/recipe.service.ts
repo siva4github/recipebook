@@ -1,7 +1,9 @@
 import { Recipe } from './../_model/recipe.model';
+import { EventEmitter, Injectable } from '@angular/core';
 
+@Injectable()
 export class RecipeService{
-
+    recipeSelected = new EventEmitter<Recipe>();
     private recipes: Recipe[] = [
 
         new Recipe('Burger','Burger Description','https://www.thespruceeats.com/thmb/l4w6PvMqsz1EjueCAh_foPmYafM=/3456x3456/smart/filters:no_upscale()/garlic-burger-patties-333503-hero-01-e4df660ff27b4e5194fdff6d703a4f83.jpg'),
