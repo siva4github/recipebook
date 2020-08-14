@@ -1,3 +1,4 @@
+import { RecipeService } from './../../_services/recipe.service';
 import { Recipe } from './../../_model/recipe.model';
 import { Component, OnInit, Input } from '@angular/core';
 import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
@@ -10,9 +11,13 @@ import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 })
 export class RecipeDetailComponent implements OnInit {
 @Input() recipe : Recipe;
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
+  }
+
+  onAddShoppingList(){
+    this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
 
 }

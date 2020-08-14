@@ -5,7 +5,7 @@ import { ShoppingListService } from './_services/shoppinglist.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ShoppingListService]
+  providers: []
 })
 export class AppComponent {
   title = 'recipe-book';
